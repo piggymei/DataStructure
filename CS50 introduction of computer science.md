@@ -1,12 +1,12 @@
-##CS50 introduction of computer science
+## CS50 introduction of computer science
 
 
-###1.	Week 0
+### 1.	Week 0
 Float is not precise due to limitation of memory
 Use sandbox as ide
 #include <stdio.h>
 Compiling the .c to .out to machine code
-###2.	Week1
+### 2.	Week1
 CPU
 RAM
 HARD DISK DRIVE
@@ -17,15 +17,15 @@ String: array of char, last one is null ‘\0’
 Int main(int argc, string argv[])
 Argument count from the program
 Sorting: select, bubble, merge
-###3.	Week2
+### 3.	Week2
 Array
 String is array of char, but end in \0 require extra 1 byte
-###4.	Week3
+### 4.	Week3
 Linear search, binary search
 Big O, Omega = Lower bound
 Bubble sort, selection sort omega is still O(n^2), Twist bubble sort, omega can be O(n)
 Merge sort omega I still (nlogn)
-###5.	Week4
+### 5.	Week4
 Hex decimal
 Address, pointer
 Typedef:define a new type
@@ -41,7 +41,7 @@ Heap overflow, memory, buffer overflow
 Scanf(“%s, &s); 
 Name of array as a pointer
 File, fprintf to a file
-###6.	Week5
+### 6.	Week5
 Insert array, O(n)
 Pointer[] now pointer acting as array
 realloc, resize the memory
@@ -59,7 +59,7 @@ Trie: a tree, its children is array of 26: search O(len(word)) meaning O(1) trad
 Queues: First In First Out, enqueue, dequeue
 Stack: push, pop
 Dictionary: hashtable 
-###7.	Week6
+### 7.	Week6
 Python. Python hello.py no need to compile
 Its own tools: list, tuple, dict, set
 Dict is implemented by hashtable
@@ -73,16 +73,17 @@ exit(1) to terminate if fail as return 1 in C
 dict is a abstract data structure
 in c can’t compare string because it is about address whereas python can
 regular expression
-###8.	Week7
+### 8.	Week7
 Sorted key = func or key = lambda  input: output
 Command line program: sqlite
 DATA :crud, create, read, update, delete vs sql: insert, select, update, delete
 SQL datatype: BLOB, INTEGER, NUMERIC, REAL, TEXT
 
-####Heap data structure is a complete binary tree satisfy the heap property. Max heap, value of each node is always greater than its child node, the value of the root is the largest.
+#### Heap data structure is a complete binary tree satisfy the heap property. Max heap, value of each node is always greater than its child node, the value of the root is the largest.
 
 Heapify:  turn to the binary tree to heap.
-```def min_heapify(array, i):
+```
+def min_heapify(array, i):
     left = 2 * i + 1
     right = 2 * i + 2
     length = len(array) - 1
@@ -92,23 +93,24 @@ Heapify:  turn to the binary tree to heap.
         smallest = right
     if smallest != i:
         array[i], array[smallest] = array[smallest], array[i]
-        min_heapify(array, smallest)```
-
-time complexity O(log(n))
-
-```def build_min_heap(array):
+        min_heapify(array, smallest)
+ ```
+Time complexity O(log(n))
+```
+def build_min_heap(array):
 for i in reversed(range(len(array)//2)):
-min_heapify(array, i)```
+min_heapify(array, i)
+```
+Time complexity O(n)
 
 Heapsort:
-
 ```def heapsort(array):
     array = array.copy()
     build_min_heap(array)    sorted_array = []
     for _ in range(len(array)):
         array[0], array[-1] = array[-1], array[0]
         sorted_array.append(array.pop())
-        min_heapify(array, 0)    return sorted_array```
-
+        min_heapify(array, 0)    return sorted_array
+ ```
 Time complexity O(nlog(n))
 
