@@ -79,6 +79,10 @@ Command line program: sqlite
 DATA :crud, create, read, update, delete vs sql: insert, select, update, delete
 SQL datatype: BLOB, INTEGER, NUMERIC, REAL, TEXT
 
+####
+linear data structure: array, stack, queue and linked list
+hierarchical data structure: tree
+
 #### Heap data structure is a complete binary tree satisfy the heap property. Max heap, value of each node is always greater than its child node, the value of the root is the largest.
 
 Heapify:  turn to the binary tree to heap.
@@ -101,7 +105,7 @@ def build_min_heap(array):
 for i in reversed(range(len(array)//2)):
 min_heapify(array, i)
 ```
-Time complexity O(n)
+Time complexity O(nlog(n))
 
 Heapsort:
 ```def heapsort(array):
@@ -113,4 +117,11 @@ Heapsort:
         min_heapify(array, 0)    return sorted_array
  ```
 Time complexity O(nlog(n))
+#### Tree height depth
+The depth of a node is the number of edges from the node to the tree's root node.
+A root node will have a depth of 0.
+
+The height of a node is the number of edges on the longest path from the node to a leaf.
+A leaf node will have a height ofco 
+#### linear data structure, Array, LinkedList, Queue, Stacks
 
